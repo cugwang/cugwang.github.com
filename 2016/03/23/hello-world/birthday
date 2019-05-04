@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+    <title>Happy 520's Day!</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+
+ 
+    <style type="text/css">
+
+        @font-face {
+
+            font-family: digit;
+
+            src: url('digital-7_mono.ttf') format("truetype");
+
+        }
+
+    </style>
+
+    <link href="style/default.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="style/jquery.js"></script>
+
+    <script type="text/javascript" src="style/garden.js"></script>
+
+    <script type="text/javascript" src="style/functions.js"></script>
+
+</head>
+
+
+
+<body>
+	<audio autoplay="autopaly" loop="loop"  controls="controls">
+					<source src="http://121.42.25.208:3000/WebContent/love/love.mp3" type="audio/mp3" />
+	</audio>
+    <div id="mainDiv">
+
+        <div id="content">
+
+            <div id="code">
+
+                <span class="comments">/**</span><br />
+
+                <span class="space"/><span class="comments">* We are both Lol,</span><br />
+
+                <span class="space"/><span class="comments">* so I write some code to show my love to you.</span><br />
+
+                <span class="space"/><span class="comments">*/</span><br />
+
+                Boy i = <span class="keyword">new</span> Boy(<span class="string">"LiuWangyang"</span>);<br />
+
+                Girl u = <span class="keyword">new</span> Girl(<span class="string">"hhh"</span>);<br />
+
+                <span class="comments">//In late November, 2015. I met you at the the bus stop of the "GuiMiaoLuKou" </span><br />
+
+                i.met(u);<br />
+			
+                <span class="comments">// but you did not know me.so,I built a WeChat Group to get your WeChat number</span><br />
+
+                i.built_WechatGroup(u);<br />
+
+                <span class="comments">// Since then, I get close to you and try to get everything about you.</span><br />
+
+                i.get_close_to(you);<br />
+
+                <span class="comments">// You told me you like American TV series just like me .</span><br />
+
+                u.like_American_TV(i);<br />
+
+                <span class="comments">// I said that I want to travel around the world just like you.</span><br />
+				
+				i.like_travel(u);<br />
+                
+				<span class="comments">// And We talk about so many things ,such as basketball ,your ex-boyfriends and so on.</span><br />
+
+                u.talk_to(i);<br />
+
+                <span class="comments">// I invited you to climb the mountain with your friend.We are very happy during that day</span><br />
+				
+				i.climb_with(u);<br />		
+								
+				<span class="comments">// Lucky, I met with your mom at the railway station. Maybe it is too early to see your mom,but we talked very happily</span><br />
+				
+				i.met_with_mom(u);<br />
+				
+				<span class="comments">// Suddenly, I felt I should make you happy and give you what you want </span><br />
+				
+				i.love(u);<br />
+				
+                <span class="keyword">boolean</span> isAccept = <span class="keyword">false</span>;<br />
+
+                <span class="keyword">while</span> (isAccept) {<br />
+
+                <span class="placeholder"/>i.waitFor(u);<br />
+
+                <span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
+
+                <span class="placeholder"/>isAccept = u.thinkOver();<br />
+
+                }<br />
+
+                <span class="comments">// After a please sound of accept, we will live happily ever after.</span><br />
+
+                u.accept(i);<br />
+
+                i.liveHappilyWith(u);<br />
+
+
+
+            </div>
+
+            <div id="loveHeart">
+
+                <canvas id="garden"></canvas>
+
+                <div id="words">
+
+                    <div id="messages">
+
+
+
+                       ShiYalin, I will have fallen in love with you for
+
+                       
+
+                        <div id="elapseClock" style="display:none"></div>
+
+                        <a href='#' id="accept">click me if accept me</a>
+
+                    </div>
+
+                    <div id="loveu">
+
+                        Love u forever and ever.<br/>
+
+                        <div class="signature">- LiuWangyang</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="copyright">
+
+            友情支持: <a href="http://www.sangfor.com"></a><br />
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        var offsetX = $("#loveHeart").width() / 2;
+
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+
+        
+
+        if (!document.createElement('canvas').getContext) {
+
+            var msg = document.createElement("div");
+
+            msg.id = "errorMsg";
+
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+
+            document.body.appendChild(msg);
+
+            $("#code").css("display", "none")
+
+            $("#copyright").css("position", "absolute");
+
+            $("#copyright").css("bottom", "10px");
+
+            document.execCommand("stop");
+
+        } else {
+
+            setTimeout(function () {
+
+                adjustWordsPosition();
+
+                startHeartAnimation();
+
+            }, 10000);
+
+            
+
+            $("#accept").click(function(){
+
+                $(this).hide();
+
+                $("#elapseClock").show();
+
+                var together = new Date();
+
+                timeElapse(together);
+
+                setInterval(function () {
+
+                    timeElapse(together);
+
+                }, 500);
+
+            })
+
+            adjustCodePosition();
+
+            $("#code").typewriter();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
